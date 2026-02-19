@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router'
-import Homepage from './pages/Homepage'
+import Homepage from './pages/Homepage.jsx'
 import CreatePage from './pages/CreatePage'
 import NoteDetailPage from './Pages/NoteDetailPage'
 
