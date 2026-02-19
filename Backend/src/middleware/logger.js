@@ -1,0 +1,18 @@
+import colors from "colors";
+
+export const logger = (req, res, next) => {
+  const methodColors = {
+    GET: "green",
+    POST: "yellow",
+    PUT: "blue",
+    DELETE: "red",
+  };
+
+  const color = methodColors[req.method] || "white";
+
+  const logMessage = `${req.method} ${req.protocol}:// ${req.get("host")} ${req.originalUrl}`;
+
+  console.log(logMessage[color]);
+
+  next();
+};
