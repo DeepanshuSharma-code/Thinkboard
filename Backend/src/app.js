@@ -12,13 +12,10 @@ import { ratelimiter } from "./middleware/ratelimiter.js";
 
 const app = express();
 
-if(process.env.NODE_ENV !== "production"){
 app.use(cors({
   origin: "http://localhost:5173",
   credentials: true
 }))
-}
-
 
 configDotenv();
 app.use(express.json());
@@ -31,16 +28,6 @@ app.use(logger);
 app.use(ratelimiter);
 
 app.use("/notes", router);
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "./Frontend/dist")));
-
-  app.get(/.*/, (req, res) => {
-    res.sendFile(
-      path.join(__dirname, "./Frontend", "dist", "index.html")
-    );
-  });
-}
 
 connectDb().then(() => {
 
