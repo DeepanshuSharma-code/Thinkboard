@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import api from '../libs/axios';
 import toast from 'react-hot-toast';
 import { MoveLeft } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router';
 
 const CreatePage = () => {
   const [title, setTitle] = useState("");
