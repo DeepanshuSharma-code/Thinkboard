@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import api from '../libs/axios';
 import RateLimitedUI from '../components/isRateLimitedUI';
-import Navbar from '../Components/Navbar';
+import Navbar from '../components/Navbar';
 import { toast } from "react-hot-toast"
-import NoteCard from '../Components/NoteCard';
+import NoteCard from '../components/NoteCard';
 import NotesNotFound from '../components/noteNotFound';
 
     const Homepage = () => {
