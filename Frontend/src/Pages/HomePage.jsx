@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import api from '../libs/axios';
-import RateLimitedUI from '../components/isRateLimitedUI';
+import RateLimitedUI from '../components/isratelimited';
 import { toast } from "react-hot-toast"
-import NotesNotFound from "../components/noteNotFound"
-import NoteCard from '../components/NoteCard';
-import Navbar from '../components/Navbar';
+import NotesNotFound from "../components/notenotfound"
+import NoteCard from '../components/notecard';
+import Navbar from '../components/navbar';
 
-    const Homepage = () => {
+    const Homepage = () => { 
         const [ loading , setLoading ] = useState(true);
         const [ notes, setNotes ] = useState([]);
         const [ isRateLimited, setRateLimited ] = useState(false);

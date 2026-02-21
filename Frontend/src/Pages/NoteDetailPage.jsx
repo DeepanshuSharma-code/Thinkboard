@@ -8,7 +8,7 @@ import { ArrowLeftIcon, LoaderIcon, Trash2Icon } from "lucide-react";
 const NoteDetailPage = () => {
   const [note, setNote] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
+  const [saving, setSaving] = useState(false); 
 
   const navigate = useNavigate();
 
