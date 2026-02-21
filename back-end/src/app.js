@@ -32,13 +32,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 app.use(ratelimiter);
 
-app.use("/notes", router);
+app.use("/api/notes", router);
 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static(path.join(__dirname,"../front-end/dist")))
 
 app.get(/.*/, (req,res)=>{
-  res.sendFile(path.join(__dirname, "../front-end","dis","index.html"))
+  res.sendFile(path.join(__dirname, "../front-end","dist","index.html"))
 })
 }
 

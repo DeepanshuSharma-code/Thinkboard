@@ -16,7 +16,7 @@ import Navbar from '../components/navbar';
                 try {
                     const res = await api.get('/notes')
                     console.log(res.data);
-                    setNotes(res.data.notes);
+                    setNotes(res.data.notes || []);
                     setRateLimited(false)
                 } catch (error) {
                     console.log("Error loading notes.", error);
@@ -37,7 +37,7 @@ import Navbar from '../components/navbar';
   <div>
     <Navbar/>
     {isRateLimited && <RateLimitedUI/>}
-    {notes.length === 0 && !isRateLimited && (
+    {notes?.length === 0 && !isRateLimited && (
         <div>
             <NotesNotFound/>
         </div>
