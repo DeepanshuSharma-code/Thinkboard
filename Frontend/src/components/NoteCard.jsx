@@ -1,7 +1,7 @@
 
 import { Edit2, Trash2 } from "lucide-react";
 import api from "../libs/axios";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { formatDate } from "../libs/utils";
 import toast from "react-hot-toast";
 

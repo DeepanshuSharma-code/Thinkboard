@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import api from '../libs/axios';
 import RateLimitedUI from '../components/isRateLimitedUI';
-import Navbar from '../components/Navbar';
 import { toast } from "react-hot-toast"
+import NotesNotFound from "../components/noteNotFound"
 import NoteCard from '../components/NoteCard';
-import NotesNotFound from '../components/noteNotFound';
+import Navbar from '../components/Navbar';
 
     const Homepage = () => {
         const [ loading , setLoading ] = useState(true);
