@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 app.use(ratelimiter);
 
-app.use("/api/notes", router);
+app.use("api/notes", router);
 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static(path.join(__dirname,"../front-end/dist")))
